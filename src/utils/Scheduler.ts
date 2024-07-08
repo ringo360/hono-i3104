@@ -34,6 +34,5 @@ process.on('SIGTERM', shutdown);
  * @param {() => (void | Promise<void>)} task
  */
 export function onShutdown(task: any) {
-	consola.log(task);
 	closeListeners.push(task);
 }
